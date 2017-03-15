@@ -130,7 +130,7 @@
 - (void)setCoverImageUrl:(NSString *)coverImageUrl
 {
     _coverImageUrl = coverImageUrl;
-    [_coverImageView sd_setImageWithURL:[NSURL URLWithString:coverImageUrl] placeholderImage:[UIImage imageNamed:@"Icon_PlaceholderImage"]];
+    [_coverImageView sd_setImageWithURL:[NSURL URLWithString:coverImageUrl] placeholderImage:[UIImage imageNamed:@"Icon_NavigationBar_PlaceholderImage"]];
 }
 
 @end

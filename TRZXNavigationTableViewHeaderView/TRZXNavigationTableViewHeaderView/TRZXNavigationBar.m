@@ -126,13 +126,13 @@
     
     [_backButton setTitleColor:isShow ? [UIColor grayColor] : [UIColor whiteColor] forState:UIControlStateNormal];
 
-    UIImage *backNormalImage = [UIImage imageNamed:isShow ? @"Icon_ProjectDetail_Back_Normal_Gray" : @"Icon_ProjectDetail_Back_Normal_White"];
+    UIImage *backNormalImage = [UIImage imageNamed:isShow ? @"Icon_NavigationBar_Back_Normal_Gray" : @"Icon_NavigationBar_Back_Normal_White"];
     [_backButton setImage:backNormalImage forState:UIControlStateNormal];
     
-    UIImage *collectionNormalImage = [UIImage imageNamed:isShow ? @"Icon_ProjectDetail_Collection_Normal_Gray" : @"Icon_ProjectDetail_Collection_Normal_White"];
+    UIImage *collectionNormalImage = [UIImage imageNamed:isShow ? @"Icon_NavigationBar_Collection_Normal_Gray" : @"Icon_NavigationBar_Collection_Normal_White"];
     [_collectButton setImage:collectionNormalImage forState:UIControlStateNormal];
     
-    UIImage *shareNormalImage = [UIImage imageNamed:isShow ? @"Icon_ProjectDetail_Share_Normal_Gray" : @"Icon_ProjectDetail_Share_Normal_White"];
+    UIImage *shareNormalImage = [UIImage imageNamed:isShow ? @"Icon_NavigationBar_Share_Normal_Gray" : @"Icon_NavigationBar_Share_Normal_White"];
     [_shareButton setImage:shareNormalImage forState:UIControlStateNormal];
 }
 
@@ -161,7 +161,7 @@
 {
     if (!_backButton) {
         _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backButton setImage:[UIImage imageNamed:@"Icon_ProjectDetail_Back_Normal_White"] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:@"Icon_NavigationBar_Back_Normal_White"] forState:UIControlStateNormal];
         [_backButton setTitleColor:[UIColor whiteColor]  forState:UIControlStateNormal];
         [_backButton setTitle:@"返回" forState:UIControlStateNormal];
         _backButton.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -179,8 +179,8 @@
 {
     if (!_collectButton) {
         _collectButton = [[UIButton alloc] init];
-        [_collectButton setImage:[UIImage imageNamed:@"Icon_ProjectDetail_Collection_Normal_White"] forState:UIControlStateNormal];
-        [_collectButton setImage:[UIImage imageNamed:@"Icon_ProjectDetail_Collection_Selected"] forState:UIControlStateSelected];
+        [_collectButton setImage:[UIImage imageNamed:@"Icon_NavigationBar_Collection_Normal_White"] forState:UIControlStateNormal];
+        [_collectButton setImage:[UIImage imageNamed:@"Icon_NavigationBar_Collection_Selected"] forState:UIControlStateSelected];
         [_collectButton addTarget:self action:@selector(composeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         _collectButton.tag = ENavigationBarAction_Collect;
         _collectButton.hidden = self.collectButtonHidden;
@@ -192,7 +192,7 @@
 {
     if (!_shareButton) {
         _shareButton = [[UIButton alloc] init];
-        [_shareButton setImage:[UIImage imageNamed:@"Icon_ProjectDetail_Share_Normal_White"] forState:UIControlStateNormal];
+        [_shareButton setImage:[UIImage imageNamed:@"Icon_NavigationBar_Share_Normal_White"] forState:UIControlStateNormal];
         [_shareButton addTarget:self action:@selector(composeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         _shareButton.tag = ENavigationBarAction_Share;
         _shareButton.hidden = self.shareButtonHidden;
