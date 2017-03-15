@@ -97,7 +97,7 @@
     return _navigationBar;
 }
 
-- (void)setOnNavigationBarActionBlock:(void (^)(ENavigationBarAction))onNavigationBarActionBlock
+- (void)setOnNavigationBarActionBlock:(void (^)(ENavigationBarAction action, UIButton *button))onNavigationBarActionBlock
 {
     _onNavigationBarActionBlock = onNavigationBarActionBlock;
     _navigationBar.onNavigationBarActionBlock = onNavigationBarActionBlock;
@@ -131,6 +131,12 @@
 {
     _coverImageUrl = coverImageUrl;
     [_coverImageView sd_setImageWithURL:[NSURL URLWithString:coverImageUrl] placeholderImage:[UIImage imageNamed:@"Icon_NavigationBar_PlaceholderImage"]];
+}
+
+- (void)setSharedButtonIsSelected:(BOOL)sharedButtonIsSelected
+{
+    _sharedButtonIsSelected = sharedButtonIsSelected;
+    _navigationBar.sharedButtonIsSelected = sharedButtonIsSelected;
 }
 
 @end

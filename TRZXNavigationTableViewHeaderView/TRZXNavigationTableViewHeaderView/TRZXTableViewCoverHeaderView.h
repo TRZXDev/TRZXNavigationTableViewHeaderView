@@ -45,9 +45,14 @@
 @property (nonatomic, assign) BOOL shareButtonHidden;
 
 /**
+ 设置分享按钮被选状态
+ */
+@property (nonatomic, assign) BOOL sharedButtonIsSelected;
+
+/**
  导航栏个按钮点击事件回调
  */
-@property (nonatomic, copy) void(^onNavigationBarActionBlock)(ENavigationBarAction action);
+@property (nonatomic, copy) void(^onNavigationBarActionBlock)(ENavigationBarAction action, UIButton *button);
 
 
 - (void)addOwnViews;

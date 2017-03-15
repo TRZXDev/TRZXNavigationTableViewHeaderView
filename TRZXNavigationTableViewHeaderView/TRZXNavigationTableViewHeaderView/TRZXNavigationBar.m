@@ -98,11 +98,11 @@
 
 - (void)composeButtonClicked:(UIButton *)sender
 {
-    if (self.onNavigationBarActionBlock) {
-        self.onNavigationBarActionBlock(sender.tag);
-    }
     if (sender.tag == ENavigationBarAction_Collect) {
         sender.selected = !sender.isSelected;
+    }
+    if (self.onNavigationBarActionBlock) {
+        self.onNavigationBarActionBlock(sender.tag, sender);
     }
 }
 
@@ -227,6 +227,12 @@
 {
     _shareButtonHidden = shareButtonHidden;
     _shareButton.hidden = shareButtonHidden;
+}
+
+- (void)setSharedButtonIsSelected:(BOOL)sharedButtonIsSelected
+{
+    _sharedButtonIsSelected = sharedButtonIsSelected;
+    _shareButton.selected = sharedButtonIsSelected;
 }
 
 @end
